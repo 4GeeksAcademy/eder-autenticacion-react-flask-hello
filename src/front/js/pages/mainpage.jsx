@@ -100,7 +100,8 @@ export function MainPage() {
                           greatest moment in electric guitar history. The
                           magazine has also listed him among the "25 all-time
                           weirdest guitarists" and the "50 fastest guitarists of
-                          all time".
+                          all time". Some of the most well known song are
+                          'Jordan', 'welcome to bucketheadland' and soothsayer'!
                         </p>
                         <p className="card-text">
                           <small className="text-muted">

@@ -125,16 +125,6 @@ export function Register() {
                   {/* SUBMIT BORRA EL USEREF ANTES DE ENVIAR LA DATA??? */}
                   <button
                     className="btn btn-primary"
-                    type="submit"
-                    style={{ fontFamily: "Chakra Petch" }}
-                    onSubmit={(e) => {
-                      e.preventDefault, console.log(newAccount.current);
-                    }}
-                  >
-                    Create New Accout
-                  </button>
-                  <button
-                    className="btn btn-primary"
                     type="button"
                     style={{ fontFamily: "Chakra Petch" }}
                     onClick={(e) => {

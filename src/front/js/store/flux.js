@@ -104,7 +104,8 @@ const getState = ({ getStore, getActions, setStore }) => {
             }
           );
 
-          if (!response.ok) {            
+          if (!response.ok) {
+            alert("There was a problem, try again");
             const errorText = await response.text();
             console.error(
               "Error en el envío HTTP:",
@@ -115,6 +116,7 @@ const getState = ({ getStore, getActions, setStore }) => {
               `HTTP error! status: ${response.status}, ${errorText}`
             );
           }
+          alert("your account was created, go back to login");
         } catch (error) {
           console.log(error.message);
         }
