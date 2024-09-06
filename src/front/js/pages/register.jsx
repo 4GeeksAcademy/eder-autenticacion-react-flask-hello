@@ -1,10 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
+import { useContext } from "react";
+import { Context } from "../store/appContext";
 
 export function Register() {
+  const { store, actions } = useContext(Context);
   const newAccount = useRef({});
-  console.log(newAccount.current);
+  const navigate = useNavigate();
 
   function clearState() {
     newAccount.current = {};
@@ -26,6 +29,7 @@ export function Register() {
                   type="button"
                   className="btn btn-danger"
                   style={{ fontFamily: "Chakra Petch" }}
+                  onClick={() => navigate("/")}
                 >
                   Back
                 </button>
@@ -135,6 +139,7 @@ export function Register() {
                     style={{ fontFamily: "Chakra Petch" }}
                     onClick={(e) => {
                       e.preventDefault, console.log(newAccount.current);
+                      actions.createUser(newAccount.current);
                     }}
                   >
                     Create New Accout

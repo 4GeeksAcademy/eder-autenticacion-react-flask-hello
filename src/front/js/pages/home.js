@@ -1,13 +1,21 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
+import { useRef } from "react";
+
 /* import rigoImageUrl from "../../img/rigo-baby.jpg"; */
 import "../../styles/home.css";
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
+  const newLogin = useRef({});
+  const navigate = useNavigate();
 
   return (
-    <div className="vh-100 d-flex align-items-center" style={{ backgroundColor: "#02010A" }}>
+    <div
+      className="vh-100 d-flex align-items-center"
+      style={{ backgroundColor: "#02010A" }}
+    >
       <div className="container p-lg-5">
         <div
           className="container-fluid p-lg-5 border border-light rounded-3"
@@ -18,16 +26,13 @@ export const Home = () => {
               <h1 className="display-5  fw-bold">Welcome to Bucketheadland</h1>
             </div>
             <div className="col d-flex px-lg-5 " style={{ maxWidth: "50em" }}>
-              <div className="ps-lg-5">
-                <p className=" text-center">L_O_G in!</p>
-              </div>
-
               <div className="pe-lg-5 ms-auto d-flex text-center">
                 <p className="px-lg-3">No account yet?</p>
                 <button
                   type="button"
                   class="btn btn-dark border"
                   style={{ fontFamily: "Chakra Petch" }}
+                  onClick={()=>navigate('/register')}
                 >
                   Register!
                 </button>
@@ -46,7 +51,7 @@ export const Home = () => {
                   type="text"
                   class="form-control"
                   id="exampleFormControlInput1"
-                  
+                  onChange={(e) => (newLogin.current.username = e.target.value)}
                 />
               </div>
               <div>
@@ -62,12 +67,26 @@ export const Home = () => {
                   id="inputPassword5"
                   class="form-control"
                   aria-describedby="passwordHelpBlock"
-                  
+                  onChange={(e) => (newLogin.current.password = e.target.value)}
                 />
                 <div id="passwordHelpBlock" class="form-text">
                   Don't share your password or any sensitive information to
                   anyone.
                 </div>
+              </div>
+              <div className="p-2">
+                <button
+                  className="btn btn-dark border "
+                  type="button"
+                  style={{ fontFamily: "Chakra Petch" }}
+                  onClick={(e) => {
+                    e.preventDefault;
+                    navigate("/waiting");
+                    actions.login(newLogin.current);
+                  }}
+                >
+                  L_O_G in!
+                </button>
               </div>
             </div>
           </div>
