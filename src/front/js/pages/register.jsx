@@ -23,7 +23,7 @@ export function Register() {
           style={{ backgroundColor: "#140152" }}
         >
           <div className="row row-cols-md-1 row-cols-lg-1 gap-lg-3 justify-content-center">
-            <div className="col">
+            <div className="col ps-lg-5 ms-lg-5">
               <div>
                 <button
                   type="button"
@@ -38,7 +38,7 @@ export function Register() {
                 <p>Create an accout</p>
               </div>
             </div>
-            <div className="col">
+            <div className="col ps-lg-5 ms-lg-5">
               <form className="row g-3 needs-validation" noValidate>
                 <div className="col-md-4">
                   <label
