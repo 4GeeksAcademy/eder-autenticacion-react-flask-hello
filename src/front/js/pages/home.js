@@ -21,7 +21,7 @@ export const Home = () => {
           className="container-fluid p-lg-5 border border-light rounded-3"
           style={{ backgroundColor: "#140152" }}
         >
-          <div className="row row-cols-md-1 row-cols-lg-1 gap-lg-3 justify-content-center">
+          <div className="row row-cols-1 row-cols-md-1 row-cols-lg-1 gap-lg-3 justify-content-center">
             <div className="col text-center" style={{ color: "#BA181B" }}>
               <h1 className="display-5  fw-bold">Welcome to Bucketheadland</h1>
             </div>
@@ -30,8 +30,8 @@ export const Home = () => {
                 <p className="px-lg-3">No account yet?</p>
                 <button
                   type="button"
-                  class="btn btn-dark border"
-                  style={{ fontFamily: "Chakra Petch" }}
+                  className="btn btn-dark border"
+                  style={{ fontFamily: "Chakra Petch", maxHeight:"40px"}}
                   onClick={()=>navigate('/register')}
                 >
                   Register!
@@ -39,25 +39,25 @@ export const Home = () => {
               </div>
             </div>
             <div className="col px-lg-5" style={{ maxWidth: "50em" }}>
-              <div class="mb-3">
+              <div className="mb-3">
                 <label
-                  for="exampleFormControlInput1"
-                  class="form-label text-light"
+                  htmlFor="exampleFormControlInput1"
+                  className="form-label text-light"
                   style={{ fontFamily: "Chakra Petch" }}
                 >
                   Username
                 </label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="exampleFormControlInput1"
                   onChange={(e) => (newLogin.current.username = e.target.value)}
                 />
               </div>
               <div>
                 <label
-                  for="inputPassword5"
-                  class="form-label text-light"
+                  htmlFor="inputPassword5"
+                  className="form-label text-light"
                   style={{ fontFamily: "Chakra Petch" }}
                 >
                   Password
@@ -65,11 +65,11 @@ export const Home = () => {
                 <input
                   type="password"
                   id="inputPassword5"
-                  class="form-control"
+                  className="form-control"
                   aria-describedby="passwordHelpBlock"
                   onChange={(e) => (newLogin.current.password = e.target.value)}
                 />
-                <div id="passwordHelpBlock" class="form-text">
+                <div id="passwordHelpBlock" className="form-text">
                   Don't share your password or any sensitive information to
                   anyone.
                 </div>
