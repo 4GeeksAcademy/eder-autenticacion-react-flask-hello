@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import { useRef } from "react";
 
-/* import rigoImageUrl from "../../img/rigo-baby.jpg"; */
+/* import rigoImageUrl from "../../img/rigo-baby.jpg"asdasd; */
 import "../../styles/home.css";
 import { useNavigate } from "react-router-dom";
 
@@ -76,7 +76,7 @@ export const Home = () => {
               </div>
               <div className="p-2">
                 <button
-                  className="btn btn-dark border "
+                  className="btn btn-dark border" 
                   type="button"
                   style={{ fontFamily: "Chakra Petch" }}
                   onClick={(e) => {
